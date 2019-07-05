@@ -2,24 +2,66 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>FreeCodeCamp JavaScript</title> 
+        
+        <!-- PureCSS -->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Font Awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+        <link rel="stylesheet" type="text/css" href=stylesheet.css>
+
     </head>
     <body>
-        <form id="form" onsubmit="mainInput(); return false">
-            <h4>Input:</h4>
-            <input name="input" type="text" id="textbox">
-            <select name="task" id="dropdown">
-                <option value="palindrome">Palindrome checker</option>
-                <option value="roman">Roman number converter</option>
-            </select>
-        </form>
+        <div class="pure-g">
+            <div class="pure-u-1-2" id="container">
+                <div id="mainWrap">
+                    <form class="pure-form pure-form-aligned" id="form" onsubmit="mainInput(); return false">
+                        <label for="textbox">Input:</label>
+                        <input name="input" type="text" id="textbox">
+                        <select name="task" id="dropdown" onchange="dropdownChange(); return false">
+                            <option value="palindrome">Palindrome checker</option>
+                            <option value="roman">Roman number converter</option>
+                            <option value="caesar">Caesars cipher</option>
+                            <option value="telephone">Telephone number validator</option>
+                        </select>
+                        <button class="pure-button pure-button-primary" type="submit"><i class="fa fa-chevron-right"></i></button>
+                    </form>
+                    
+                    <div id="outputWrap" class="code code-wrap">
+                        <p id="output"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="pure-u-1-2" id="description">
+                <div id="rightSide">
+                    <h4 id="descTitle">Palindrome checker</h4>
+                    <p id="descText">
+                        Return true if the given string is a palindrome. Otherwise, return false.
+                        
+                        A <i>palindrome</i> is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing.
+                    </p>
 
-        <h4>Output:</h4>
-        <p id="output">Placeholder</p>
-
+                    <h4>Test cases</h4>
+                    <ul id="descTests">
+                        <li>eye should return true.</li>
+                        <li>_eye should return true.</li>
+                        <li>_eye should return true.</li>
+                        <li>not a palindrome should return false.</li>
+                        <li>A man, a plan, a canal. Panama should return true.</li>
+                        <li>never odd or even should return true.</li>
+                        <li>nope should return false.</li>
+                        <li>almostomla should return false.</li>
+                        <li>My age is 0, 0 si ega ym. should return true.</li>
+                        <li>1 eye for of 1 eye. should return false.</li>
+                        <li>0_0 (: /-\ :) 0-0 should return true.</li>
+                        <li>five|\_/|four should return false.</li>
+                    </ul>
+                </div>    
+            </div>
+        </div>
 
 
 

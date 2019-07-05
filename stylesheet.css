@@ -1,0 +1,60 @@
+
+#container {
+    min-height: 100vh;
+    background-color: #f1f7f6;
+}
+
+#description {
+    min-height: 100vh;
+    background-color: #f9f8f2;
+}
+
+#rightSide {
+    margin: 2em;
+}
+
+#mainWrap {
+    margin: 2em;
+}
+
+
+#outputWrap {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*Copied from PureCSS form styling*/
+#output {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background-color: white;
+    height: 10em;
+    word-wrap: break-word;
+}
+
+
+/* Formats code blocks */
+pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
